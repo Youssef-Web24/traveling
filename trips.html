@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Packages & Trips — Tarveling</title>
+    <meta name="description"
+        content="Browse all Tarveling travel packages. Adventure, beach, cultural, and safari tours across 60+ destinations. Find your perfect trip and book today." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                    <div class="nav__logo-icon">✈️</div>Tarvel<span>ing</span>
+                </a>
+                <ul class="nav__links">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="destinations.html" class="nav__link">Destinations</a></li>
+                    <li><a href="trips.html" class="nav__link active">Trips</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__actions"><a href="contact.html" class="btn btn-primary btn-sm">Book a Trip</a></div>
+                <button class="nav__hamburger" id="hamburger"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+        <div class="nav__mobile" id="mobileNav">
+            <a href="index.html" class="nav__link">Home</a>
+            <a href="destinations.html" class="nav__link">Destinations</a>
+            <a href="trips.html" class="nav__link active">Trips</a>
+            <a href="services.html" class="nav__link">Services</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+            <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top:8px;justify-content:center;">Book a
+                Trip</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero__breadcrumb">
+                <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <span>Trips</span>
+            </div>
+            <span class="badge" style="margin-bottom:16px;">🗺️ All Packages</span>
+            <h1 class="page-hero__title">Find Your Perfect<br><span class="text-primary">Travel Package</span></h1>
+            <p class="page-hero__desc">From 5-day city escapes to 21-day expedition odysseys — we have a trip for every
+                dream, timeline and budget.</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH + FILTER ===== -->
+    <section class="section--sm" style="background:var(--clr-dark-2);">
+        <div class="container">
+            <div class="search-bar__card reveal" style="border-radius:var(--radius-lg);">
+                <div class="search-bar__fields">
+                    <div class="search-field">
+                        <label>Search Trips</label>
+                        <div class="search-field__input">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="tripSearchInput" placeholder="e.g. Bali, Japan, Safari…" />
+                        </div>
+                    </div>
+                    <div class="search-field">
+                        <label>Trip Type</label>
+                        <div class="search-field__input">
+                            <i class="fa-solid fa-tag"></i>
+                            <select id="tripTypeSelect">
+                                <option value="">All Types</option>
+                                <option>Adventure</option>
+                                <option>Beach</option>
+                                <option>Cultural</option>
+                                <option>Safari</option>
+                                <option>Honeymoon</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-field">
+                        <label>Duration</label>
+                        <div class="search-field__input">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <select id="tripDuration">
+                                <option value="">Any Duration</option>
+                                <option>1–7 Days</option>
+                                <option>8–14 Days</option>
+                                <option>15+ Days</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-field">
+                        <label>Budget (per person)</label>
+                        <div class="search-field__input">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <select id="tripBudget">
+                                <option value="">Any Budget</option>
+                                <option>Under $1,000</option>
+                                <option>$1,000 – $2,500</option>
+                                <option>$2,500 – $5,000</option>
+                                <option>$5,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="height:52px;margin-top:22px;">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRIPS GRID ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="trips__filters reveal" style="margin-bottom:48px;">
+                <button class="filter-btn active" data-filter="all">All Trips</button>
+                <button class="filter-btn" data-filter="adventure">🏔 Adventure</button>
+                <button class="filter-btn" data-filter="beach">🏖 Beach</button>
+                <button class="filter-btn" data-filter="culture">🏛 Cultural</button>
+                <button class="filter-btn" data-filter="safari">🐘 Safari</button>
+                <button class="filter-btn" data-filter="honeymoon">💑 Honeymoon</button>
+            </div>
+
+            <div class="trips__grid" id="tripsGrid">
+
+                <!-- Trip 1 -->
+                <div class="trip-card reveal" data-category="adventure">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+                            alt="Patagonia" loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">🏔 Adventure</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (238)</span>
+                        </div>
+                        <h3 class="trip-card__title">Patagonia Trekking Expedition</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 12 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 12</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$2,499 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 2 -->
+                <div class="trip-card reveal delay-1" data-category="beach">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1510414696678-2415ad8474aa?w=600&q=80" alt="Maldives"
+                            loading="lazy" />
+                        <span class="badge badge--gold trip-card__difficulty">🏖 Beach</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.8 (412)</span>
+                        </div>
+                        <h3 class="trip-card__title">Maldives Luxury Overwater Escape</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 8 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 6</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$3,199 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 3 -->
+                <div class="trip-card reveal delay-2" data-category="culture">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=600&q=80" alt="Japan"
+                            loading="lazy" />
+                        <span class="badge trip-card__difficulty">🏛 Cultural</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (196)</span>
+                        </div>
+                        <h3 class="trip-card__title">Japan Cherry Blossom Cultural Tour</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 10 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 16</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$2,899 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 4 -->
+                <div class="trip-card reveal" data-category="safari">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=80"
+                            alt="Serengeti Safari" loading="lazy" />
+                        <span class="badge badge--gold trip-card__difficulty">🐘 Safari</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>5.0 (167)</span>
+                        </div>
+                        <h3 class="trip-card__title">Serengeti Great Migration Safari</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 9 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 8</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$4,299 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 5 -->
+                <div class="trip-card reveal delay-1" data-category="honeymoon">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&q=80"
+                            alt="Santorini Honeymoon" loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">💑 Honeymoon</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (302)</span>
+                        </div>
+                        <h3 class="trip-card__title">Santorini Romantic Honeymoon</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 7 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Couples</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$2,199 <span>/ couple</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 6 -->
+                <div class="trip-card reveal delay-2" data-category="adventure">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                            alt="Iceland Aurora" loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">🏔 Adventure</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.8 (289)</span>
+                        </div>
+                        <h3 class="trip-card__title">Iceland Northern Lights & Glaciers</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 8 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 14</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$2,799 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 7 -->
+                <div class="trip-card reveal" data-category="culture">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1474755032398-4b0ed3b2ae5c?w=600&q=80" alt="Peru"
+                            loading="lazy" />
+                        <span class="badge trip-card__difficulty">🏛 Cultural</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (143)</span>
+                        </div>
+                        <h3 class="trip-card__title">Peru & Machu Picchu Explorer</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 11 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 14</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$2,299 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 8 -->
+                <div class="trip-card reveal delay-1" data-category="beach">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=600&q=80" alt="Bali"
+                            loading="lazy" />
+                        <span class="badge badge--gold trip-card__difficulty">🏖 Beach</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★☆</div><span>4.7 (521)</span>
+                        </div>
+                        <h3 class="trip-card__title">Bali Bliss — Temples, Rice & Surf</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 9 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Max 16</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$1,499 <span>/ person</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip 9 -->
+                <div class="trip-card reveal delay-2" data-category="honeymoon">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80"
+                            alt="Paris Honeymoon" loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">💑 Honeymoon</span>
+                        <button class="trip-card__wishlist"><i class="fa-solid fa-bookmark"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.8 (418)</span>
+                        </div>
+                        <h3 class="trip-card__title">Paris & French Riviera in Love</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-clock"></i> 10 Days</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-users"></i> Couples</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div class="trip-card__price">
+                                <div class="trip-card__price-from">From</div>
+                                <div class="trip-card__price-amount">$2,599 <span>/ couple</span></div>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="footer__logo-icon">✈️</div>Tarvel<span>ing</span>
+                    </div>
+                    <p class="footer__desc">Crafting extraordinary travel experiences since 2016.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Quick Links</div>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="destinations.html" class="footer__link">Destinations</a></li>
+                        <li><a href="trips.html" class="footer__link">Trips</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer__col-title">Contact</div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-envelope"></i>
+                        <div class="footer__contact-text">hello@tarveling.com</div>
+                    </div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-phone"></i>
+                        <div class="footer__contact-text">+1 (800) 555-TRAVEL</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Newsletter</div>
+                    <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:16px;">Weekly travel
+                        deals & inspiration.</p>
+                    <form id="newsletterForm" style="display:flex;flex-direction:column;gap:10px;">
+                        <input class="newsletter__input" type="email" id="newsletterEmail" placeholder="Your email"
+                            style="border-radius:var(--radius-md);" />
+                        <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Tarveling. All rights reserved.</span>
+                <div class="footer__bottom-links"><a href="#" class="footer__bottom-link">Privacy Policy</a><a href="#"
+                        class="footer__bottom-link">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

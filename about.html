@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us — Tarveling</title>
+    <meta name="description"
+        content="Learn about Tarveling — our story, our passionate team, and our mission to create travel experiences that transform lives. 8 years of inspiring journeys." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .mission {
+            background: var(--clr-dark-2);
+        }
+
+        .mission__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .mission-card {
+            text-align: center;
+            padding: 40px 28px;
+            border: 1px solid var(--clr-glass-border);
+            border-radius: var(--radius-lg);
+            background: var(--clr-glass);
+            transition: var(--transition);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(13, 110, 253, 0.3);
+        }
+
+        .mission-card__icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .mission-card__title {
+            font-size: var(--fs-lg);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .mission-card__desc {
+            font-size: var(--fs-sm);
+            color: var(--clr-text-muted);
+            line-height: 1.7;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 64px 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 32px 20px;
+            border: 1px solid var(--clr-glass-border);
+            border-radius: var(--radius-lg);
+            background: var(--clr-glass);
+        }
+
+        .stat-box__num {
+            font-size: var(--fs-3xl);
+            font-weight: 900;
+            color: var(--clr-white);
+            line-height: 1;
+        }
+
+        .stat-box__num span {
+            color: var(--clr-accent);
+        }
+
+        .stat-box__label {
+            font-size: var(--fs-sm);
+            color: var(--clr-text-muted);
+            margin-top: 8px;
+        }
+
+        @media(max-width:768px) {
+            .mission__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                    <div class="nav__logo-icon">✈️</div>Tarvel<span>ing</span>
+                </a>
+                <ul class="nav__links">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="destinations.html" class="nav__link">Destinations</a></li>
+                    <li><a href="trips.html" class="nav__link">Trips</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="about.html" class="nav__link active">About</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__actions"><a href="contact.html" class="btn btn-primary btn-sm">Book a Trip</a></div>
+                <button class="nav__hamburger" id="hamburger"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+        <div class="nav__mobile" id="mobileNav">
+            <a href="index.html" class="nav__link">Home</a>
+            <a href="destinations.html" class="nav__link">Destinations</a>
+            <a href="trips.html" class="nav__link">Trips</a>
+            <a href="services.html" class="nav__link">Services</a>
+            <a href="about.html" class="nav__link active">About</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+            <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top:8px;justify-content:center;">Book a
+                Trip</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero__breadcrumb">
+                <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <span>About</span>
+            </div>
+            <span class="badge" style="margin-bottom:16px;">✨ Our Story</span>
+            <h1 class="page-hero__title">Born from a Love<br><span class="text-accent">of Adventure</span></h1>
+            <p class="page-hero__desc">Founded in 2016, Tarveling started as a small team of passionate explorers with
+                one goal: make extraordinary travel accessible to everyone.</p>
+        </div>
+    </section>
+
+    <!-- ===== STORY ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="about-story__grid">
+                <div class="reveal-left">
+                    <img class="about-story__img"
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80" alt="Our story"
+                        loading="lazy" />
+                </div>
+                <div class="reveal-right">
+                    <span class="badge" style="margin-bottom:20px;">📖 Our Journey</span>
+                    <h2
+                        style="font-size:clamp(1.75rem,4vw,2.5rem); font-weight:800; line-height:1.2; margin-bottom:24px;">
+                        From a Kitchen Table<br><span class="text-accent">to 60+ Countries</span></h2>
+                    <p
+                        style="color:var(--clr-text-muted); font-size:var(--fs-md); line-height:1.8; margin-bottom:20px;">
+                        It all began when our founders, two best friends who had quit their desk jobs to travel
+                        Southeast Asia, returned home with a burning passion and a shared frustration: great travel
+                        experiences shouldn't be so hard to find.
+                    </p>
+                    <p
+                        style="color:var(--clr-text-muted); font-size:var(--fs-md); line-height:1.8; margin-bottom:32px;">
+                        They started Tarveling to change that. Today, we're a team of 40+ travel obsessives who have
+                        collectively visited 120+ countries, and we pour every mile of that experience into every trip
+                        we plan for you.
+                    </p>
+                    <div style="display:flex; gap:40px;">
+                        <div>
+                            <div style="font-size:2.5rem; font-weight:900; color:var(--clr-white);">2016</div>
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Year Founded</div>
+                        </div>
+                        <div>
+                            <div style="font-size:2.5rem; font-weight:900; color:var(--clr-accent);">40+</div>
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Team Members</div>
+                        </div>
+                        <div>
+                            <div style="font-size:2.5rem; font-weight:900; color:var(--clr-gold);">120+</div>
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Countries Visited</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row reveal" style="margin-top:80px;">
+                <div class="stat-box">
+                    <div class="stat-box__num">12K<span>+</span></div>
+                    <div class="stat-box__label">Happy Travelers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-box__num">60<span>+</span></div>
+                    <div class="stat-box__label">Destinations</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-box__num">4.9<span>★</span></div>
+                    <div class="stat-box__label">Average Rating</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-box__num">8<span>yr</span></div>
+                    <div class="stat-box__label">Of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSION ===== -->
+    <section class="section mission">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="badge">🎯 Our Values</span>
+                <h2>What Drives Everything<br><span class="text-primary">We Do</span></h2>
+            </div>
+            <div class="mission__grid">
+                <div class="mission-card reveal">
+                    <div class="mission-card__icon">🌍</div>
+                    <div class="mission-card__title">Sustainable Travel</div>
+                    <div class="mission-card__desc">We offset 100% of carbon for every trip, partner with local
+                        communities, and promote responsible, low-impact tourism practices.</div>
+                </div>
+                <div class="mission-card reveal delay-1">
+                    <div class="mission-card__icon">🤝</div>
+                    <div class="mission-card__title">Authentic Connections</div>
+                    <div class="mission-card__desc">We believe the best travel creates real connections — with local
+                        people, cultures, and traditions that you carry with you forever.</div>
+                </div>
+                <div class="mission-card reveal delay-2">
+                    <div class="mission-card__icon">💯</div>
+                    <div class="mission-card__title">Unmatched Quality</div>
+                    <div class="mission-card__desc">Every property, guide, and experience is personally vetted by our
+                        team. We only recommend what we'd happily book for ourselves.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="badge">👥 Our Team</span>
+                <h2>The Passionate People<br><span class="text-accent">Behind Your Journey</span></h2>
+                <p>Every member of our team is a seasoned traveler with deep on-the-ground knowledge of the destinations
+                    they manage.</p>
+            </div>
+            <div class="team__grid">
+                <div class="team-card reveal">
+                    <img class="team-card__img" src="https://i.pravatar.cc/400?img=12" alt="Alex Chen" loading="lazy" />
+                    <div class="team-card__body">
+                        <div class="team-card__name">Alex Chen</div>
+                        <div class="team-card__role">Co-Founder & CEO</div>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card reveal delay-1">
+                    <img class="team-card__img" src="https://i.pravatar.cc/400?img=29" alt="Maria Santos"
+                        loading="lazy" />
+                    <div class="team-card__body">
+                        <div class="team-card__name">Maria Santos</div>
+                        <div class="team-card__role">Co-Founder & CCO</div>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card reveal delay-2">
+                    <img class="team-card__img" src="https://i.pravatar.cc/400?img=52" alt="James Okafor"
+                        loading="lazy" />
+                    <div class="team-card__body">
+                        <div class="team-card__name">James Okafor</div>
+                        <div class="team-card__role">Head of Africa & Safari</div>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card reveal delay-3">
+                    <img class="team-card__img" src="https://i.pravatar.cc/400?img=44" alt="Yuki Tanaka"
+                        loading="lazy" />
+                    <div class="team-card__body">
+                        <div class="team-card__name">Yuki Tanaka</div>
+                        <div class="team-card__role">Asia & Japan Expert</div>
+                        <div class="team-card__social">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="badge">💬 Testimonials</span>
+                <h2>12,000+ Happy<br><span class="text-accent">Travelers Can't Be Wrong</span></h2>
+            </div>
+            <div class="testimonials__slider reveal">
+                <div class="testimonials__track" id="testimonialTrack">
+                    <div class="testimonials__slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">★★★★★</div>
+                            <p class="testimonial-card__quote">"Tarveling made our Patagonia trip an absolute dream. The
+                                attention to detail was extraordinary — every lodge, every guide, every moment was
+                                perfectly planned."</p>
+                            <div class="testimonial-card__author">
+                                <img class="testimonial-card__avatar" src="https://i.pravatar.cc/100?img=5"
+                                    alt="Sarah M." />
+                                <div>
+                                    <div class="testimonial-card__name">Sarah M.</div>
+                                    <div class="testimonial-card__trip">Patagonia Expedition — 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">★★★★★</div>
+                            <p class="testimonial-card__quote">"Our Maldives honeymoon was beyond anything we could have
+                                imagined. Tarveling handled each detail beautifully — from the overwater villa to the
+                                sunset dinner."</p>
+                            <div class="testimonial-card__author">
+                                <img class="testimonial-card__avatar" src="https://i.pravatar.cc/100?img=47"
+                                    alt="James & Emma" />
+                                <div>
+                                    <div class="testimonial-card__name">James & Emma R.</div>
+                                    <div class="testimonial-card__trip">Maldives Honeymoon — 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials__slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__stars">★★★★★</div>
+                            <p class="testimonial-card__quote">"The Japan cultural tour blew my mind. Our guide was
+                                incredibly knowledgeable. I felt like I wasn't just seeing Japan, but truly living it.
+                                Worth every penny."</p>
+                            <div class="testimonial-card__author">
+                                <img class="testimonial-card__avatar" src="https://i.pravatar.cc/100?img=32"
+                                    alt="Amir K." />
+                                <div>
+                                    <div class="testimonial-card__name">Amir K.</div>
+                                    <div class="testimonial-card__trip">Japan Cultural Tour — 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials__controls">
+                    <button class="testimonials__btn" id="prevSlide" aria-label="Previous"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <div class="testimonials__dots" id="sliderDots">
+                        <button class="testimonials__dot active" data-slide="0"></button>
+                        <button class="testimonials__dot" data-slide="1"></button>
+                        <button class="testimonials__dot" data-slide="2"></button>
+                    </div>
+                    <button class="testimonials__btn" id="nextSlide" aria-label="Next"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="footer__logo-icon">✈️</div>Tarvel<span>ing</span>
+                    </div>
+                    <p class="footer__desc">Crafting extraordinary travel experiences since 2016.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Quick Links</div>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="destinations.html" class="footer__link">Destinations</a></li>
+                        <li><a href="trips.html" class="footer__link">Trips</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer__col-title">Contact</div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-envelope"></i>
+                        <div class="footer__contact-text">hello@tarveling.com</div>
+                    </div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-phone"></i>
+                        <div class="footer__contact-text">+1 (800) 555-TRAVEL</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Newsletter</div>
+                    <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:16px;">Weekly travel
+                        deals & inspiration.</p>
+                    <form id="newsletterForm" style="display:flex;flex-direction:column;gap:10px;"><input
+                            class="newsletter__input" type="email" id="newsletterEmail" placeholder="Your email"
+                            style="border-radius:var(--radius-md);" /><button type="submit"
+                            class="btn btn-primary btn-sm">Subscribe</button></form>
+                </div>
+            </div>
+            <div class="footer__bottom"><span>&copy; 2026 Tarveling. All rights reserved.</span>
+                <div class="footer__bottom-links"><a href="#" class="footer__bottom-link">Privacy Policy</a><a href="#"
+                        class="footer__bottom-link">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

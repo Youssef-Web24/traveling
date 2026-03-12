@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services — Tarveling</title>
+    <meta name="description"
+        content="Tarveling offers flight booking, hotel reservations, guided tours, custom itineraries, travel insurance, and 24/7 support for a seamless travel experience." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        .service-full {
+            padding: 100px 0;
+        }
+
+        .service-full:nth-child(even) {
+            background: var(--clr-dark-2);
+        }
+
+        .service-full__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .service-full:nth-child(even) .service-full__grid {
+            direction: rtl;
+        }
+
+        .service-full:nth-child(even) .service-full__grid>* {
+            direction: ltr;
+        }
+
+        .service-full__img {
+            width: 100%;
+            height: 420px;
+            border-radius: var(--radius-xl);
+            object-fit: cover;
+        }
+
+        .service-full__features {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .service-full__feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: var(--fs-sm);
+            color: var(--clr-text-muted);
+        }
+
+        .service-full__feature i {
+            color: var(--clr-primary);
+            width: 20px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .service-full__grid {
+                grid-template-columns: 1fr;
+                direction: ltr !important;
+            }
+
+            .service-full:nth-child(even) .service-full__grid {
+                direction: ltr;
+            }
+        }
+
+        .process {
+            background: var(--clr-dark-2);
+        }
+
+        .process__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process__grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12%;
+            right: 12%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+            z-index: 0;
+        }
+
+        .process__step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process__num {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--fs-2xl);
+            font-weight: 800;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 24px rgba(13, 110, 253, 0.4);
+        }
+
+        .process__title {
+            font-size: var(--fs-md);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .process__desc {
+            font-size: var(--fs-sm);
+            color: var(--clr-text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .process__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process__grid::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .process__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                    <div class="nav__logo-icon">✈️</div>Tarvel<span>ing</span>
+                </a>
+                <ul class="nav__links">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="destinations.html" class="nav__link">Destinations</a></li>
+                    <li><a href="trips.html" class="nav__link">Trips</a></li>
+                    <li><a href="services.html" class="nav__link active">Services</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__actions"><a href="contact.html" class="btn btn-primary btn-sm">Book a Trip</a></div>
+                <button class="nav__hamburger" id="hamburger"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+        <div class="nav__mobile" id="mobileNav">
+            <a href="index.html" class="nav__link">Home</a>
+            <a href="destinations.html" class="nav__link">Destinations</a>
+            <a href="trips.html" class="nav__link">Trips</a>
+            <a href="services.html" class="nav__link active">Services</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+            <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top:8px;justify-content:center;">Book a
+                Trip</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero__breadcrumb">
+                <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <span>Services</span>
+            </div>
+            <span class="badge" style="margin-bottom:16px;">🛎 What We Offer</span>
+            <h1 class="page-hero__title">Full-Service Travel,<br><span class="text-gold">Start to Finish</span></h1>
+            <p class="page-hero__desc">Every detail handled, every comfort ensured. Tarveling delivers an end-to-end
+                travel experience that leaves nothing to chance.</p>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES GRID ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="services__grid">
+                <div class="service-card reveal">
+                    <div class="service-card__icon">✈️</div>
+                    <h3 class="service-card__title">Flight Booking</h3>
+                    <p class="service-card__desc">Access to 500+ airlines. Economy to Business Class. We find the best
+                        routes and times for your schedule and budget.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <div class="service-card__icon">🏨</div>
+                    <h3 class="service-card__title">Hotel & Resorts</h3>
+                    <p class="service-card__desc">Curated properties from boutique hideaways to 5-star resorts.
+                        Exclusive negotiated rates for Tarveling travelers.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <div class="service-card__icon">🗺️</div>
+                    <h3 class="service-card__title">Guided Tours</h3>
+                    <p class="service-card__desc">Private and small-group tours with passionate local experts. Deep
+                        cultural immersion on every itinerary.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal delay-3">
+                    <div class="service-card__icon">🛡️</div>
+                    <h3 class="service-card__title">Travel Insurance</h3>
+                    <p class="service-card__desc">Comprehensive coverage — medical emergencies, trip cancellation, lost
+                        luggage, and adventure sport activities.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__icon">🎒</div>
+                    <h3 class="service-card__title">Custom Itineraries</h3>
+                    <p class="service-card__desc">Fully bespoke travel plans designed around your interests, pace, and
+                        dream destinations. Truly one-of-a-kind.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <div class="service-card__icon">🚗</div>
+                    <h3 class="service-card__title">Transfers & Rentals</h3>
+                    <p class="service-card__desc">Private airport transfers, luxury car rentals, yacht charters, and
+                        helicopter excursions. Arrive in signature style.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <div class="service-card__icon">🌐</div>
+                    <h3 class="service-card__title">Visa Assistance</h3>
+                    <p class="service-card__desc">Navigate complex visa requirements with ease. Our specialists handle
+                        documentation for 120+ countries.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card reveal delay-3">
+                    <div class="service-card__icon">📞</div>
+                    <h3 class="service-card__title">24/7 Support</h3>
+                    <p class="service-card__desc">Around-the-clock assistance via phone, chat, and email. Wherever you
+                        are in the world, we're always there.</p>
+                    <a href="contact.html" class="service-card__link">Get Started <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section process">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="badge">⚙️ How It Works</span>
+                <h2>Book Your Dream Trip<br><span class="text-primary">in 4 Simple Steps</span></h2>
+            </div>
+            <div class="process__grid">
+                <div class="process__step reveal">
+                    <div class="process__num">1</div>
+                    <div class="process__title">Tell Us Your Dream</div>
+                    <div class="process__desc">Fill out our travel request form or speak directly with an expert advisor
+                        about your ideal trip.</div>
+                </div>
+                <div class="process__step reveal delay-1">
+                    <div class="process__num">2</div>
+                    <div class="process__title">Get a Custom Plan</div>
+                    <div class="process__desc">Within 48 hours, receive a personalised itinerary tailored entirely to
+                        your preferences and budget.</div>
+                </div>
+                <div class="process__step reveal delay-2">
+                    <div class="process__num">3</div>
+                    <div class="process__title">Review & Confirm</div>
+                    <div class="process__desc">Refine the plan as needed, then confirm your booking with a secure
+                        deposit. All details confirmed instantly.</div>
+                </div>
+                <div class="process__step reveal delay-3">
+                    <div class="process__num">4</div>
+                    <div class="process__title">Travel & Enjoy</div>
+                    <div class="process__desc">Pack your bags! Your Tarveling travel kit and dedicated support contact
+                        will be ready before you depart.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section--sm" style="padding-bottom:100px;">
+        <div class="container">
+            <div class="promo-banner reveal">
+                <div>
+                    <div class="promo-banner__tag">🎯 Free Consultation</div>
+                    <h2 class="promo-banner__title">Not Sure Where to Start?<br>Talk to Our Experts</h2>
+                    <p class="promo-banner__desc">Book a free 30-minute consultation with one of our travel specialists.
+                        No pressure, no commitment — just great ideas.</p>
+                </div>
+                <div class="promo-banner__actions">
+                    <a href="contact.html" class="btn btn-accent btn-lg">Book Free Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="footer__logo-icon">✈️</div>Tarvel<span>ing</span>
+                    </div>
+                    <p class="footer__desc">Crafting extraordinary travel experiences since 2016.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Quick Links</div>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="destinations.html" class="footer__link">Destinations</a></li>
+                        <li><a href="trips.html" class="footer__link">Trips</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer__col-title">Contact</div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-envelope"></i>
+                        <div class="footer__contact-text">hello@tarveling.com</div>
+                    </div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-phone"></i>
+                        <div class="footer__contact-text">+1 (800) 555-TRAVEL</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Newsletter</div>
+                    <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:16px;">Weekly travel
+                        deals & inspiration.</p>
+                    <form id="newsletterForm" style="display:flex;flex-direction:column;gap:10px;"><input
+                            class="newsletter__input" type="email" id="newsletterEmail" placeholder="Your email"
+                            style="border-radius:var(--radius-md);" /><button type="submit"
+                            class="btn btn-primary btn-sm">Subscribe</button></form>
+                </div>
+            </div>
+            <div class="footer__bottom"><span>&copy; 2026 Tarveling. All rights reserved.</span>
+                <div class="footer__bottom-links"><a href="#" class="footer__bottom-link">Privacy Policy</a><a href="#"
+                        class="footer__bottom-link">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

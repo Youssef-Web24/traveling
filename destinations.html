@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations — Tarveling</title>
+    <meta name="description"
+        content="Explore 60+ handpicked travel destinations worldwide. From tropical beaches to mountain peaks — find your perfect escape with Tarveling." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                    <div class="nav__logo-icon">✈️</div>Tarvel<span>ing</span>
+                </a>
+                <ul class="nav__links">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="destinations.html" class="nav__link active">Destinations</a></li>
+                    <li><a href="trips.html" class="nav__link">Trips</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__actions"><a href="contact.html" class="btn btn-primary btn-sm">Book a Trip</a></div>
+                <button class="nav__hamburger" id="hamburger"
+                    aria-label="Open menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+        <div class="nav__mobile" id="mobileNav">
+            <a href="index.html" class="nav__link">Home</a>
+            <a href="destinations.html" class="nav__link active">Destinations</a>
+            <a href="trips.html" class="nav__link">Trips</a>
+            <a href="services.html" class="nav__link">Services</a>
+            <a href="about.html" class="nav__link">About</a>
+            <a href="contact.html" class="nav__link">Contact</a>
+            <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top:8px;justify-content:center;">Book a
+                Trip</a>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero__breadcrumb">
+                <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>
+                <span>Destinations</span>
+            </div>
+            <span class="badge" style="margin-bottom:16px;">🌍 60+ Destinations</span>
+            <h1 class="page-hero__title">Discover the<br><span class="text-accent">World's Best Places</span></h1>
+            <p class="page-hero__desc">From hidden gems to iconic wonders — explore our curated collection of
+                destinations across every continent.</p>
+        </div>
+    </section>
+
+    <!-- ===== FILTER + DESTINATIONS GRID ===== -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="trips__filters reveal" style="margin-bottom:48px;">
+                <button class="dest-filter-btn filter-btn active" data-filter="all">All Regions</button>
+                <button class="dest-filter-btn filter-btn" data-filter="europe">🏰 Europe</button>
+                <button class="dest-filter-btn filter-btn" data-filter="asia">🌏 Asia</button>
+                <button class="dest-filter-btn filter-btn" data-filter="americas">🌎 Americas</button>
+                <button class="dest-filter-btn filter-btn" data-filter="africa">🦁 Africa</button>
+                <button class="dest-filter-btn filter-btn" data-filter="oceania">🦘 Oceania</button>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;">
+
+                <div class="dest-full-card trip-card reveal" data-region="europe">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&q=80"
+                            alt="Santorini" loading="lazy" />
+                        <span class="badge trip-card__difficulty">Europe</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-santorini"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (1,024 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Santorini, Greece</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Apr–Oct</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $1,299</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Iconic views, sunsets &
+                                culture</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal delay-1" data-region="europe">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80"
+                            alt="Paris, France" loading="lazy" />
+                        <span class="badge trip-card__difficulty">Europe</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-paris"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.8 (3,210 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Paris, France</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: May–Sep</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $999</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Art, romance & gastronomy
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal delay-2" data-region="europe">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Iceland"
+                            loading="lazy" />
+                        <span class="badge trip-card__difficulty">Europe</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-iceland"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (786 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Iceland</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Oct–Mar</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $1,799</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Northern lights & geysers
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal" data-region="asia">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=600&q=80" alt="Bali"
+                            loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">Asia</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-bali"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★☆</div><span>4.7 (2,108 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Bali, Indonesia</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Apr–Oct</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $899</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Temples, rice terraces &
+                                surf</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal delay-1" data-region="asia">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=600&q=80" alt="Japan"
+                            loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">Asia</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-japan"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (1,893 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Japan</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Mar–May</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $1,499</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Culture, cuisine & cherry
+                                blossoms</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal delay-2" data-region="asia">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1510414696678-2415ad8474aa?w=600&q=80" alt="Maldives"
+                            loading="lazy" />
+                        <span class="badge badge--accent trip-card__difficulty">Asia</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-maldives"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.8 (1,542 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Maldives</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Nov–Apr</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $2,199</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Luxury overwater villas &
+                                reefs</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal" data-region="americas">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1474755032398-4b0ed3b2ae5c?w=600&q=80"
+                            alt="Machu Picchu" loading="lazy" />
+                        <span class="badge badge--gold trip-card__difficulty">Americas</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-machu"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.9 (921 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Machu Picchu, Peru</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: May–Sep</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $1,599</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Ancient Inca citadel &
+                                Andes</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal delay-1" data-region="americas">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+                            alt="Patagonia" loading="lazy" />
+                        <span class="badge badge--gold trip-card__difficulty">Americas</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-patagonia"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>4.8 (643 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Patagonia, Chile</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Nov–Mar</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $2,499</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Dramatic glaciers &
+                                trekking</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest-full-card trip-card reveal delay-2" data-region="africa">
+                    <div class="trip-card__thumb">
+                        <img class="trip-card__img"
+                            src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&q=80" alt="Serengeti"
+                            loading="lazy" />
+                        <span class="badge trip-card__difficulty"
+                            style="background:rgba(245,166,35,0.2);color:var(--clr-gold);border-color:rgba(245,166,35,0.3);">Africa</span>
+                        <button class="trip-card__wishlist dest-card__wish" data-id="d-serengeti"><i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                    <div class="trip-card__body">
+                        <div class="trip-card__rating">
+                            <div class="trip-card__stars">★★★★★</div><span>5.0 (387 visitors)</span>
+                        </div>
+                        <h3 class="trip-card__title">Serengeti, Tanzania</h3>
+                        <div class="trip-card__meta">
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-sun"></i> Best: Jun–Oct</div>
+                            <div class="trip-card__meta-item"><i class="fa-solid fa-tag"></i> From $3,499</div>
+                        </div>
+                        <div class="trip-card__footer">
+                            <div style="font-size:var(--fs-sm); color:var(--clr-text-muted);">Big Five safaris &
+                                migration</div>
+                            <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section--sm" style="padding-bottom:100px;">
+        <div class="container">
+            <div class="promo-banner reveal">
+                <div>
+                    <div class="promo-banner__tag">✈️ Custom Itinerary</div>
+                    <h2 class="promo-banner__title">Don't See Your Dream<br>Destination?</h2>
+                    <p class="promo-banner__desc">We craft fully bespoke itineraries to any corner of the world. Tell us
+                        your dream, we'll make it happen.</p>
+                </div>
+                <div class="promo-banner__actions">
+                    <a href="contact.html" class="btn btn-accent btn-lg">Request a Custom Trip</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <div class="footer__logo-icon">✈️</div>Tarvel<span>ing</span>
+                    </div>
+                    <p class="footer__desc">Crafting extraordinary travel experiences since 2016.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Quick Links</div>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="destinations.html" class="footer__link">Destinations</a></li>
+                        <li><a href="trips.html" class="footer__link">Trips</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer__col-title">Contact</div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-envelope"></i>
+                        <div class="footer__contact-text">hello@tarveling.com</div>
+                    </div>
+                    <div class="footer__contact-item"><i class="fa-solid fa-phone"></i>
+                        <div class="footer__contact-text">+1 (800) 555-TRAVEL</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer__col-title">Newsletter</div>
+                    <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:16px;">Get weekly
+                        inspiration & deals.</p>
+                    <form id="newsletterForm" style="display:flex;flex-direction:column;gap:10px;">
+                        <input class="newsletter__input" type="email" id="newsletterEmail" placeholder="Your email"
+                            style="border-radius:var(--radius-md);" />
+                        <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 Tarveling. All rights reserved.</span>
+                <div class="footer__bottom-links">
+                    <a href="#" class="footer__bottom-link">Privacy Policy</a>
+                    <a href="#" class="footer__bottom-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
